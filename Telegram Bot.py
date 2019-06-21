@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -18,4 +19,5 @@ async def on_message(message):
         await message.channel.send("구매는 Telegram#9524 에게 해주세요")
 
 
-client.run("NTkxMjU5ODA4NDg1NzM2NTEx.XQuLtA.RXP-SacZiE84JmPwMgpgbfHO8zI")
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
